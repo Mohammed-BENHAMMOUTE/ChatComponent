@@ -6,6 +6,7 @@ const MessageContainer = styled.div`
   display: flex;
   margin: 10px 0;
   justify-content: ${({ isUser }) => (isUser ? 'flex-end' : 'flex-start')};
+  align-items: center;
 `;
 
 const MessageBubble = styled.div`
@@ -16,7 +17,6 @@ const MessageBubble = styled.div`
   color: ${({ isUser }) => (isUser ? '#1b6ca8' : '#1d643b')};
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 `;
-
 const Message = ({ isUser, text }) => {
   return (
     <MessageContainer isUser={isUser}>
